@@ -15,7 +15,9 @@ $text-marked-color: #FFF;
     max-width: 1210px;
     margin: auto;
 }
-
+button{
+    cursor: pointer;
+}
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
 $fontFamily : Inter;
 @mixin regTextStyle {

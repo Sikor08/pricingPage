@@ -10,6 +10,10 @@
   margin: auto;
 }
 
+button {
+  cursor: pointer;
+}
+
 .header-wrap {
   display: grid;
   grid-template-columns: 14% auto auto;
@@ -103,6 +107,7 @@
   }
   .ham-list :active {
     color: #FFF;
+    z-index: 10;
   }
   .ham-list__active {
     top: 0;
@@ -201,10 +206,10 @@
   }
 }
 .tariff-card:first-child {
-  left: 0;
+  left: 5px;
 }
 .tariff-card:nth-child(2) {
-  left: 32%;
+  left: 322px;
 }
 .tariff-card:nth-child(2) button::after {
   content: url(../img/arrowBtn.svg);
@@ -213,7 +218,6 @@
 .tariff-card_active {
   top: 36px;
   z-index: 3;
-  border: 1px solid #000;
   background-color: #1D252B;
 }
 .tariff-card_active button {
@@ -221,7 +225,7 @@
   border: none;
 }
 .tariff-card:last-child {
-  right: 0;
+  right: -30px;
 }
 
 .tariff-top {
@@ -237,22 +241,25 @@
   margin: 0 0 9px 0;
 }
 .tariff-top__price {
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: 130px 0;
+  align-items: baseline;
   color: #FFF;
   font-family: Inter;
   font-size: 37.848px;
   font-weight: 800;
   line-height: 128.023%;
   margin: 0;
-  padding: 6px 8px;
+  padding: 9px 8px;
 }
-.tariff-top__price::before {
-  content: "$";
-  font-size: 11px;
-  font-weight: 500;
-  line-height: 128%;
-  color: #FFF;
+.tariff-top .price-valut {
   position: absolute;
-  left: 61px;
+  top: 58px;
+  left: 55px;
+  /* display: block; */
+  /* height: 5px; */
+  font-size: 12px;
 }
 .tariff-top__interval {
   color: rgba(255, 255, 255, 0.8);
@@ -260,6 +267,7 @@
   font-size: 12px;
   font-weight: 400;
   line-height: 128.023%;
+  cursor: pointer;
 }
 .tariff-top__interval::before {
   content: "/";

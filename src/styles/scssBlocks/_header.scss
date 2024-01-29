@@ -72,6 +72,8 @@
         color: $text-color;
         :active {
             color: $text-marked-color;
+            z-index: 10;
+
         }
         &__active{
             top: 0;
@@ -106,22 +108,6 @@
 }
 .ham-icon span {
     transition: ease-in-out .2s;
-
     width: 20px;
     border: 1px solid #FFF;
 }
-
-// .ham-menu.active span {
-//     background-color: #d4b87e;
-// }
-// .ham-menu.active span:nth-child(1) {
-//     top: 50%;
-//     transform: translate(-50%, -50%) rotate(45deg);
-// }
-// .ham-menu.active span:nth-child(2) {
-//     opacity: 0;
-// }
-// .ham-menu.active span:nth-child(3) {
-//     top: 50%;
-//     transform: translate(-50%, -50%) rotate(-45deg);
-// }

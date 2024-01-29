@@ -33,7 +33,6 @@
 }
 .tariff-card {
     transition: ease-in-out .1s;
-
     position: absolute;
     display: grid;
     grid-template-rows: 204px 288px 100px;
@@ -48,13 +47,14 @@
 
     }
     &:first-child {
-        left: 0;
+        left: 5px;
     }
     &:nth-child(2) {
-        left: 32%;
+        left: 322px;
         & button {
             &::after{
-                content: url(../img/arrowBtn.svg);
+                content: 
+                url(../img/arrowBtn.svg);
                 margin-left: 10px;
             }
         }
@@ -62,7 +62,6 @@
     &_active {
         top: 36px;
         z-index: 3;
-        border: 1px solid #000;
         background-color: #1D252B;
         & button {
             background-color: #BC4749;
@@ -70,7 +69,7 @@
         }
     }
     &:last-child {
-        right: 0;
+        right: -30px;
     }
 }
 .tariff-top{
@@ -82,24 +81,29 @@
         margin: 0 0 9px 0;
     }
     &__price {
+        cursor: pointer;
+        display: grid;
+        grid-template-columns: 130px 0;
+        align-items: baseline;
         color: $text-marked-color;
         font-family: Inter;
         font-size: 37.848px;
         font-weight: 800;
         line-height: 128.023%;
         margin: 0;
-        padding: 6px 8px;
-    &::before {
-        content: '$';
-        font-size: 11px;
-        font-weight: 500;
-        line-height: 128%;
-        color: $text-marked-color;
+        padding: 9px 8px;
+    }
+    .price-valut{
         position: absolute;
-        left: 61px
-    }}
+    top: 58px;
+    left: 55px;
+    /* display: block; */
+    /* height: 5px; */
+    font-size: 12px;
+    }
     &__interval {
         @include regTextStyle;
+        cursor: pointer;
         &::before {
             content: '/'
         }
