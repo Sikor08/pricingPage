@@ -1,0 +1,163 @@
+.heading {
+    color: $text-color;
+    font-family: $fontFamily;
+    font-size: 42px;
+    font-weight: 600;
+    margin: 0 auto;
+    text-align: center;
+}
+.content-wrap {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+
+}
+.tariff {
+    padding: 38px 0;
+}
+.tariff-list {
+    @include ulStyle;
+    display: flex;
+    padding: 68px 0;
+    position: relative;
+    width: 940px;
+    height: 600px;
+    margin: 0 auto;
+    @media (max-width: $tabletWidth) {
+        width: fit-content;
+        height: 1400px;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+.tariff-card {
+    transition: ease-in-out .1s;
+
+    position: absolute;
+    display: grid;
+    grid-template-rows: 204px 288px 100px;
+    border: 1px solid #000;
+    border: none;
+    border-radius: 12px;
+    background-color: #6A994E;
+    box-shadow: 0px 3.785px 94.621px 0px rgba(0, 0, 0, 0.25);
+    @media (max-width: $tabletWidth) {
+        position: static;
+        grid-template-rows: 204px 150px 100px;
+
+    }
+    &:first-child {
+        left: 0;
+    }
+    &:nth-child(2) {
+        left: 32%;
+        & button {
+            &::after{
+                content: url(../img/arrowBtn.svg);
+                margin-left: 10px;
+            }
+        }
+    }
+    &_active {
+        top: 36px;
+        z-index: 3;
+        border: 1px solid #000;
+        background-color: #1D252B;
+        & button {
+            background-color: #BC4749;
+            border: none;
+        }
+    }
+    &:last-child {
+        right: 0;
+    }
+}
+.tariff-top{
+    padding: 39px 57px 71px;
+    position: relative;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    &__heading {
+        @include h3Style;
+        margin: 0 0 9px 0;
+    }
+    &__price {
+        color: $text-marked-color;
+        font-family: Inter;
+        font-size: 37.848px;
+        font-weight: 800;
+        line-height: 128.023%;
+        margin: 0;
+        padding: 6px 8px;
+    &::before {
+        content: '$';
+        font-size: 11px;
+        font-weight: 500;
+        line-height: 128%;
+        color: $text-marked-color;
+        position: absolute;
+        left: 61px
+    }}
+    &__interval {
+        @include regTextStyle;
+        &::before {
+            content: '/'
+        }
+    }
+    &__desc {
+        @include regTextStyle;
+        max-width: 220px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        margin: 3px 0;
+        padding: 15px 0;
+    }
+}
+.tariff-middle{
+    padding: 9px 58px;
+    
+    &__heading {
+        @include h3Style;
+        font-size: 15px;
+        margin-bottom: 12px;
+    }
+    &__title {
+        font-size: 13.247px;
+        font-weight: 500;
+        line-height: 128.023%;
+        color: $text-marked-color;
+    }
+}
+.features-list {
+    @include ulStyle;
+    &__item {
+        @include regTextStyle;
+        &_highlight{
+            font-weight: 500;
+            color: $text-marked-color;
+        }
+        padding: 8px 0;
+        @media (max-width: $tabletWidth) {
+            padding: 0;
+        }
+        &::before {
+            content: url(../img/arrow.svg);
+            margin-right: 7px;
+        }
+    }
+}
+.tariff-btn{
+    display: flex;
+    align-items: center;
+    margin: 34px auto 27px;
+    border: 0.864px solid #D0D0D0;
+    border-radius: 7px;
+    background-color: inherit;
+    padding: 11px 62px;
+    color: $text-marked-color;
+    font-family: $fontFamily;
+    font-weight: 500;
+    font-size: 12px;
+    @media (max-width: $tabletWidth) {
+        margin: 45px auto 5px;
+    }
+}
