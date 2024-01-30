@@ -3,10 +3,18 @@ import './styles/styles.css';
 //ham-menu
 const hamIcon = document.querySelector('.ham-icon');
 const hamList = document.querySelector('.ham-list');
-
+const content = document.querySelector('.content');
+const container = document.querySelector('.container')
 hamIcon.addEventListener('click', () => {
     hamList.classList.toggle('ham-list__active');
     hamIcon.classList.toggle('ham-icon__active');
+    content.classList.toggle('ham-active');
+    if (hamList.classList.contains('ham-list__active')) {
+        container.style.background = '#BC4749'
+    } else {
+        container.style.background = 'revert-layer'
+
+    }
 })
 // card hover
 const card = document.querySelectorAll('.tariff-card');

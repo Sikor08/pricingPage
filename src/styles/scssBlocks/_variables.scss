@@ -1,25 +1,12 @@
-.container{
-    background: #405847;
-    // opacity: 0.8;
-    // background: radial-gradient(153deg, #36603E 35.82%, #1E26C2 107.75%);
-    // box-shadow: 0px -9.631px 86.651px 0px rgba(0, 0, 0, 0.10), 0px 23.115px 240.782px 0px rgba(0, 0, 0, 0.05);
-    overflow: hidden;
-    position: relative;
-}
+//variables
 $tabletWidth : 1024px;
-
 $mobileWidth : 768px;
 $text-color: rgba(255, 255, 255, 0.8);
 $text-marked-color: #FFF;
-.wrapper {
-    max-width: 1210px;
-    margin: auto;
-}
-button{
-    cursor: pointer;
-}
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
 $fontFamily : Inter;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
+
+//mixins
 @mixin regTextStyle {
     color: $text-color;
     font-family: Inter, sans-serif;
@@ -38,3 +25,34 @@ $fontFamily : Inter;
   padding: 0;
   list-style: none
 }
+.container {
+    background: url(../img/wall1.png);
+    background-position: center;
+    overflow: hidden;
+    position: relative;
+    background-position-y: -210px;
+    background-repeat: no-repeat;
+    @media (max-width: $tabletWidth) {
+        background: url(../img/walt.png);
+        background-position-y: 0;
+
+        // background: url(/src/img/logo.png);
+    }
+
+    // 36603e
+}
+// @media (max-width: 1200px) {
+//     .container{
+//         background: none;
+//     }
+// }
+.wrapper {
+    max-width: 1210px;
+    margin: auto;
+
+}
+
+button{
+    cursor: pointer;
+}
+

@@ -1,8 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap");
 .container {
-  background: #405847;
+  background: url(../img/wall1.png);
+  background-position: center;
   overflow: hidden;
   position: relative;
+  background-position-y: -210px;
+  background-repeat: no-repeat;
+}
+@media (max-width: 1024px) {
+  .container {
+    background: url(../img/walt.png);
+    background-position-y: 0;
+  }
 }
 
 .wrapper {
@@ -94,14 +103,14 @@ button {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 25px;
     top: -120%;
     height: 100vh;
     right: 0;
     width: 100%;
     background-color: #BC4749;
     z-index: 2;
-    transition: ease-in-out 0.4s;
+    transition: ease-in-out 0.2s;
     padding: 50px 0;
     color: rgba(255, 255, 255, 0.8);
   }
@@ -112,6 +121,17 @@ button {
   .ham-list__active {
     top: 0;
   }
+  .ham-list__active container {
+    width: 1100px;
+  }
+}
+
+.ham-list-item {
+  font-size: 20px;
+}
+
+.ham-active {
+  visibility: hidden;
 }
 
 .ham-icon {
