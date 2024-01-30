@@ -76,6 +76,9 @@
     padding: 39px 57px 71px;
     position: relative;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    &:hover{
+        
+    }
     &__heading {
         @include h3Style;
         margin: 0 0 9px 0;
@@ -165,3 +168,4 @@
         margin: 45px auto 5px;
     }
 }
+

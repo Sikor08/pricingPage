@@ -32,10 +32,7 @@ card.forEach(item => {
         card[1].classList.add('tariff-card_active')
     })
 })
-
-
 const intervals = document.querySelectorAll('.tariff-top__interval');
-
 intervals.forEach(item => {
     item.addEventListener('click', (e) => {
         const closest = e.target.closest('.tariff-top__price');
@@ -111,3 +108,9 @@ price.forEach(item => {
     })
 })
 
+//price entrance
+const tariffTop = document.querySelectorAll('.tariff-top');
+tariffTop.forEach(span => {
+    span.classList.add('scale-in-hor-center')
+
+})
