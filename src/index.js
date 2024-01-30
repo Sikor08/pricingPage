@@ -110,7 +110,20 @@ price.forEach(item => {
 
 //price entrance
 const tariffTop = document.querySelectorAll('.tariff-top');
-tariffTop.forEach(span => {
-    span.classList.add('scale-in-hor-center')
+// tariffTop.forEach(span => {
+//     span.classList.add('scale-in-hor-center')
 
+// })
+
+function animeClassAdd  (node){
+    node.classList.add('scale-in-ver-center');
+    node.style.visibility = 'visible'
+}
+tariffTop.forEach(item => {
+    item.style.visibility = 'hidden'
+    setTimeout(() => animeClassAdd(tariffTop[0]), 2000)
+    setTimeout(() => animeClassAdd(tariffTop[1]), 3000)
+    setTimeout(() => animeClassAdd(tariffTop[2]), 4000)
 })
+
+
