@@ -6,6 +6,7 @@ $text-marked-color: #FFF;
 $fontFamily : Inter;
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
 
+
 //mixins
 @mixin regTextStyle {
     color: $text-color;
@@ -26,15 +27,16 @@ $fontFamily : Inter;
   list-style: none
 }
 .container {
-    background: url(../img/wall1.png);
-    background-position: center;
+    max-width: 1340px;
+    margin: 0 auto;
+    background: url(../img/wallPaper.png);
+    background-position-y: 10px;
+    background-size: cover;
     overflow: hidden;
     position: relative;
-    background-position-y: -210px;
     background-repeat: no-repeat;
+    background-color: #36603e;
     @media (max-width: $tabletWidth) {
-        background: url(../img/walt.png);
-        background-position-y: 0;
 
         // background: url(/src/img/logo.png);
     }

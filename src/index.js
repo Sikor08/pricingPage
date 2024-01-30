@@ -4,16 +4,15 @@ import './styles/styles.css';
 const hamIcon = document.querySelector('.ham-icon');
 const hamList = document.querySelector('.ham-list');
 const content = document.querySelector('.content');
-const container = document.querySelector('.container')
+const body = document.getElementById('body')
 hamIcon.addEventListener('click', () => {
     hamList.classList.toggle('ham-list__active');
     hamIcon.classList.toggle('ham-icon__active');
     content.classList.toggle('ham-active');
     if (hamList.classList.contains('ham-list__active')) {
-        container.style.background = '#BC4749'
+        body.style.overflow = 'hidden'
     } else {
-        container.style.background = 'revert-layer'
-
+        body.style.overflow = 'inherit'
     }
 })
 // card hover
@@ -33,16 +32,13 @@ card.forEach(item => {
     })
 })
 
-
+// valut & interval
 const intervals = document.querySelectorAll('.tariff-top__interval');
-
 intervals.forEach(item => {
     item.addEventListener('click', (e) => {
         const closest = e.target.closest('.tariff-top__price');
-        const priceRubMonth = closest.getAttribute('data-rub');
         const priceSpan = document.querySelectorAll('.price-value');
         const valut = closest.querySelector('.price-valut');
-        const priceRubDay = priceRubMonth /30
         if (e.target.textContent === 'Months' && valut.textContent === '$') {
             intervals.forEach(item => {
                 item.textContent = 'Day'
@@ -76,20 +72,11 @@ intervals.forEach(item => {
                 item.textContent = priceRubMonth
             })
         }
-
     })
 })
 const price = document.querySelectorAll('.price-valut');
 price.forEach(item => {
     item.addEventListener('click', (e) => {
-        const closest = e.target.closest('.tariff-top__price');
-        const priceValue = closest.querySelector('.price-value');
-        const interval = closest.querySelector('.tariff-top__interval')
-        const priceRubMonth = closest.getAttribute('data-rub');
-        const pricePerMonth = closest.getAttribute('data-price');
-        const pricePerDay = pricePerMonth / 30;
-        const priceRubDay = priceRubMonth /30
-        // valutSpan = closest.querySelector('.price-valut')
         const valut = document.querySelectorAll('.price-valut');
         valut.forEach(item => {
             if (item.textContent === '$') {
@@ -110,4 +97,18 @@ price.forEach(item => {
         })
     })
 })
+
+//price entrance
+const tariffTop = document.querySelectorAll('.tariff-top');
+function animeClassAdd  (node){
+    node.classList.add('scale-in-ver-center');
+    node.style.visibility = 'inherit'
+}
+tariffTop.forEach(item => {
+    item.style.visibility = 'hidden'
+    setTimeout(() => animeClassAdd(tariffTop[0]), 2000)
+    setTimeout(() => animeClassAdd(tariffTop[1]), 3000)
+    setTimeout(() => animeClassAdd(tariffTop[2]), 4000)
+})
+
 
