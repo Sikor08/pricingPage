@@ -271,10 +271,8 @@ button {
 }
 .tariff-top .price-valut {
   position: absolute;
-  top: 58px;
-  left: 55px;
-  /* display: block; */
-  /* height: 5px; */
+  top: -5px;
+  left: -10px;
   font-size: 12px;
 }
 .tariff-top__interval {

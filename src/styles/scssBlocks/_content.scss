@@ -99,11 +99,9 @@
     }
     .price-valut{
         position: absolute;
-    top: 58px;
-    left: 55px;
-    /* display: block; */
-    /* height: 5px; */
-    font-size: 12px;
+        top: -5px;
+        left: -10px;
+        font-size: 12px;
     }
     &__interval {
         @include regTextStyle;

@@ -99,7 +99,7 @@ price.forEach(item => {
 })
 
 //price entrance
-const tariffTop = document.querySelectorAll('.tariff-top');
+const tariffTop = document.querySelectorAll('.tariff-top__price');
 function animeClassAdd  (node){
     node.classList.add('scale-in-ver-center');
     node.style.visibility = 'inherit'
