@@ -4,16 +4,15 @@ import './styles/styles.css';
 const hamIcon = document.querySelector('.ham-icon');
 const hamList = document.querySelector('.ham-list');
 const content = document.querySelector('.content');
-const container = document.querySelector('.container')
+const body = document.getElementById('body')
 hamIcon.addEventListener('click', () => {
     hamList.classList.toggle('ham-list__active');
     hamIcon.classList.toggle('ham-icon__active');
     content.classList.toggle('ham-active');
     if (hamList.classList.contains('ham-list__active')) {
-        container.style.background = '#BC4749'
+        body.style.overflow = 'hidden'
     } else {
-        container.style.background = 'revert-layer'
-
+        body.style.overflow = 'inherit'
     }
 })
 // card hover
@@ -117,7 +116,7 @@ const tariffTop = document.querySelectorAll('.tariff-top');
 
 function animeClassAdd  (node){
     node.classList.add('scale-in-ver-center');
-    node.style.visibility = 'visible'
+    node.style.visibility = 'inherit'
 }
 tariffTop.forEach(item => {
     item.style.visibility = 'hidden'
