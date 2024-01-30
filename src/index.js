@@ -31,14 +31,14 @@ card.forEach(item => {
         card[1].classList.add('tariff-card_active')
     })
 })
+
+// valut & interval
 const intervals = document.querySelectorAll('.tariff-top__interval');
 intervals.forEach(item => {
     item.addEventListener('click', (e) => {
         const closest = e.target.closest('.tariff-top__price');
-        const priceRubMonth = closest.getAttribute('data-rub');
         const priceSpan = document.querySelectorAll('.price-value');
         const valut = closest.querySelector('.price-valut');
-        const priceRubDay = priceRubMonth /30
         if (e.target.textContent === 'Months' && valut.textContent === '$') {
             intervals.forEach(item => {
                 item.textContent = 'Day'
@@ -72,20 +72,11 @@ intervals.forEach(item => {
                 item.textContent = priceRubMonth
             })
         }
-
     })
 })
 const price = document.querySelectorAll('.price-valut');
 price.forEach(item => {
     item.addEventListener('click', (e) => {
-        const closest = e.target.closest('.tariff-top__price');
-        const priceValue = closest.querySelector('.price-value');
-        const interval = closest.querySelector('.tariff-top__interval')
-        const priceRubMonth = closest.getAttribute('data-rub');
-        const pricePerMonth = closest.getAttribute('data-price');
-        const pricePerDay = pricePerMonth / 30;
-        const priceRubDay = priceRubMonth /30
-        // valutSpan = closest.querySelector('.price-valut')
         const valut = document.querySelectorAll('.price-valut');
         valut.forEach(item => {
             if (item.textContent === '$') {
@@ -109,11 +100,6 @@ price.forEach(item => {
 
 //price entrance
 const tariffTop = document.querySelectorAll('.tariff-top');
-// tariffTop.forEach(span => {
-//     span.classList.add('scale-in-hor-center')
-
-// })
-
 function animeClassAdd  (node){
     node.classList.add('scale-in-ver-center');
     node.style.visibility = 'inherit'
